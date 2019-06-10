@@ -156,24 +156,27 @@ class CreateWatchList(QtWidgets.QMainWindow):
 			
 		wlSize = len(watchListInfo)
 		
-		watchListInfo = sorted(watchListInfo, key=itemgetter(1))
+		try:
+			watchListInfo = sorted(watchListInfo, key=itemgetter(1))
 		
-		self.ui.WatchTableWidget.setColumnCount(4)
+			self.ui.WatchTableWidget.setColumnCount(4)
 		
-		self.ui.WatchTableWidget.setRowCount(wlSize)
+			self.ui.WatchTableWidget.setRowCount(wlSize)
 		
-		self.ui.WatchTableWidget.setHorizontalHeaderLabels([
-			'Symbol',
-			'Company',
-			'Change ($)',
-			'Price'
-		])
+			self.ui.WatchTableWidget.setHorizontalHeaderLabels([
+				'Symbol',
+				'Company',
+				'Change ($)',
+				'Price'
+			])
 		
-		wlSize = len(watchListInfo)
-		for i in range(0, wlSize):
-				lineSize = len(watchListInfo[i])
-				for j in range(0, lineSize):
-					self.ui.WatchTableWidget.setItem(i, j, QTableWidgetItem(watchListInfo[i][j]))
+			wlSize = len(watchListInfo)
+			for i in range(0, wlSize):
+					lineSize = len(watchListInfo[i])
+					for j in range(0, lineSize):
+						self.ui.WatchTableWidget.setItem(i, j, QTableWidgetItem(watchListInfo[i][j]))
+		except:
+			print("error with wlSize")
 
 				
 ########################################################################
