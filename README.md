@@ -1,4 +1,4 @@
-# PyStuff
+# PyStock
 
 The API that's missing a key in RunMain.py can be obtained for free from https://iextrading.com/developer/.
 
