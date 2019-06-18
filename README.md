@@ -6,9 +6,7 @@ The UI was created using PyQt5.
 
 This is a simple project that I developed as I started getting interested in the stock market.
 
-I had no prior Python experience going into this and I wanted to use this as an excuse to dig 
-further into Python.
-
+I had no real Python experience going into this so some things may be a little off, but I will be updating when I have a chance.
 
 
 
